@@ -1,0 +1,37 @@
+# Stray generated files
+/Info.plist
+/TyperAITyperAI.entitlements
+
+# Xcode build output
+build/
+DerivedData/
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+
+# DMG artifacts
+*.dmg
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Instruments
+*.trace
+
+# CocoaPods (not used, but just in case)
+Pods/
+
+# SwiftPM
+.build/
+*.resolved
+
+# Xcode user-specific settings
+xcuserdata/
+*.moved-aside
+*.hmap
+*.ipa
+*.xcarchive

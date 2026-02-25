@@ -1,0 +1,14 @@
+{
+  "images" : [
+    {
+      "filename" : "typer_icon.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "1024x1024"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

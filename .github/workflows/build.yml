@@ -1,0 +1,37 @@
+name: Build macOS App
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install xcodegen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Build app
+        run: |
+          xcodebuild \
+            -project TyperAI.xcodeproj \
+            -scheme TyperAI \
+            -configuration Release \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="-" \
+            -derivedDataPath ./build \
+            build
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Typer-Mac
+          path: build/Build/Products/Release/Typer.app

@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		135CFC243AA3FF4E1B69E765 /* AIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7610A67A314AF37AE6E45A8 /* AIService.swift */; };
+		4CE654872F4F89CF0059C3B6 /* LoginItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE654862F4F89CF0059C3B6 /* LoginItemManager.swift */; };
+		638F393C22D15FBC05D8E521 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7BACE104FCF0DB80CC6207 /* SettingsView.swift */; };
+		6DA53EF1ACE0CC8A315CBD4C /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959A6A3A2484EB29356ECE6 /* SettingsManager.swift */; };
+		781F046B36542F31DD46C36B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C171FDE03F4BCC032315F61 /* AppDelegate.swift */; };
+		AD8BB0855A3019ABF0468646 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09095FEFAC36D1FC8E9F2C99 /* PopupView.swift */; };
+		DFB498A086FC165351C6B3A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 488C96ECB8D1C44223B2B60B /* Assets.xcassets */; };
+		F80E871C8A7CF04DC9589948 /* TyperAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AE34B2DE4A7A2F2A6EB69A /* TyperAIApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		09095FEFAC36D1FC8E9F2C99 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		0C27F2539F76452B5E21F0E8 /* TyperAI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TyperAI.entitlements; sourceTree = "<group>"; };
+		11D6EF17089791E104AA65B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1C171FDE03F4BCC032315F61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		488C96ECB8D1C44223B2B60B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CE654862F4F89CF0059C3B6 /* LoginItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginItemManager.swift; sourceTree = "<group>"; };
+		4CE654882F4F8B9D0059C3B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E7BACE104FCF0DB80CC6207 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		67AE34B2DE4A7A2F2A6EB69A /* TyperAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyperAIApp.swift; sourceTree = "<group>"; };
+		9959A6A3A2484EB29356ECE6 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		A7610A67A314AF37AE6E45A8 /* AIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIService.swift; sourceTree = "<group>"; };
+		CC2C003F8B3B3E9BA052D489 /* Typer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Typer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2E78E0ADF13795CB7C48CBFC /* TyperAI */ = {
+			isa = PBXGroup;
+			children = (
+				1C171FDE03F4BCC032315F61 /* AppDelegate.swift */,
+				488C96ECB8D1C44223B2B60B /* Assets.xcassets */,
+				11D6EF17089791E104AA65B9 /* Info.plist */,
+				0C27F2539F76452B5E21F0E8 /* TyperAI.entitlements */,
+				67AE34B2DE4A7A2F2A6EB69A /* TyperAIApp.swift */,
+				D72D57F37F59E4B2686E37BB /* Services */,
+				AF00C2D590F92A76D80DC21D /* Views */,
+				4CE654862F4F89CF0059C3B6 /* LoginItemManager.swift */,
+			);
+			path = TyperAI;
+			sourceTree = "<group>";
+		};
+		AF00C2D590F92A76D80DC21D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				09095FEFAC36D1FC8E9F2C99 /* PopupView.swift */,
+				5E7BACE104FCF0DB80CC6207 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B23D9FB6DD10F93010FDA52D = {
+			isa = PBXGroup;
+			children = (
+				2E78E0ADF13795CB7C48CBFC /* TyperAI */,
+				DC41A0CFC5D480ABD49E9CC3 /* Products */,
+				4CE654882F4F8B9D0059C3B6 /* Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		D72D57F37F59E4B2686E37BB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A7610A67A314AF37AE6E45A8 /* AIService.swift */,
+				9959A6A3A2484EB29356ECE6 /* SettingsManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DC41A0CFC5D480ABD49E9CC3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC2C003F8B3B3E9BA052D489 /* Typer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A9615171CA214F6387CC4D4F /* TyperAI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7972D951225085C7631A08B9 /* Build configuration list for PBXNativeTarget "TyperAI" */;
+			buildPhases = (
+				17A5E02E5BD2A6069B04CA85 /* Sources */,
+				C5FB6267ECAF5B37DFFE664A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TyperAI;
+			packageProductDependencies = (
+			);
+			productName = TyperAI;
+			productReference = CC2C003F8B3B3E9BA052D489 /* Typer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E57369A54718FCC15FD800D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					A9615171CA214F6387CC4D4F = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B553CB5838A99DDAA724FCC7 /* Build configuration list for PBXProject "TyperAI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = B23D9FB6DD10F93010FDA52D;
+			minimizedProjectReferenceProxies = 1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A9615171CA214F6387CC4D4F /* TyperAI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C5FB6267ECAF5B37DFFE664A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFB498A086FC165351C6B3A8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17A5E02E5BD2A6069B04CA85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				135CFC243AA3FF4E1B69E765 /* AIService.swift in Sources */,
+				781F046B36542F31DD46C36B /* AppDelegate.swift in Sources */,
+				AD8BB0855A3019ABF0468646 /* PopupView.swift in Sources */,
+				6DA53EF1ACE0CC8A315CBD4C /* SettingsManager.swift in Sources */,
+				638F393C22D15FBC05D8E521 /* SettingsView.swift in Sources */,
+				4CE654872F4F89CF0059C3B6 /* LoginItemManager.swift in Sources */,
+				F80E871C8A7CF04DC9589948 /* TyperAIApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		79687A992D4FE8BE55444705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = Typer;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		AE076872C7FE5D3004E3CB03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = Typer;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		F410C5B7903E3ADE9157AB25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TyperAI/TyperAI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				INFOPLIST_FILE = TyperAI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.typer.TyperAI;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F43FEBF5C5EC53B1D0B31C71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TyperAI/TyperAI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				INFOPLIST_FILE = TyperAI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.typer.TyperAI;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7972D951225085C7631A08B9 /* Build configuration list for PBXNativeTarget "TyperAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43FEBF5C5EC53B1D0B31C71 /* Debug */,
+				F410C5B7903E3ADE9157AB25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B553CB5838A99DDAA724FCC7 /* Build configuration list for PBXProject "TyperAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE076872C7FE5D3004E3CB03 /* Debug */,
+				79687A992D4FE8BE55444705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E57369A54718FCC15FD800D /* Project object */;
+}
