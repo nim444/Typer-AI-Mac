@@ -1,19 +1,22 @@
+
+![Swift](https://img.shields.io/badge/swift-%23FA7343.svg?style=for-the-badge&logo=swift&logoColor=white)
+![macOS](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0)
 [![Build macOS App](https://github.com/nim444/Typer-AI-Mac/actions/workflows/build.yml/badge.svg)](https://github.com/nim444/Typer-AI-Mac/actions/workflows/build.yml)
 ____
 <br>
 
 
-![Banner](assets/banner.png)
+![Banner](assets/banner2.png)
 
-![Swift](https://img.shields.io/badge/swift-%23FA7343.svg?style=for-the-badge&logo=swift&logoColor=white)
-![macOS](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0)
+
+
 
 An AI-powered macOS writing copilot that fixes grammar and adjusts tone — accessible instantly from your menu bar, from anywhere on your Mac.
 
 You're in any app, you have a messy draft. Click the **Typer** icon in your menu bar, paste or type your text, and get a clean rewrite — then tap **Copy & Close** to paste it wherever you were. No switching apps. Just a floating popup over your current screen.
 
 
-
+![Demo](assets/demo.png)
 
 ---
 
