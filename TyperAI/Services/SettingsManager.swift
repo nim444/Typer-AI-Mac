@@ -11,6 +11,7 @@ class SettingsManager: ObservableObject {
     @Published var defaultProvider: String = "grok"
     @Published var customPrompt: String = "Rewrite to fix grammar and improve clarity. Please only return the fixed text and nothing else:"
     @Published var theme: String = "system"
+    @Published var fontSize: Int = 14
 
     @Published var totalFixes: Int = 0
     @Published var charactersFixed: Int = 0
@@ -31,6 +32,7 @@ class SettingsManager: ObservableObject {
         defaultProvider = UserDefaults.standard.string(forKey: "default_provider") ?? "grok"
         customPrompt = UserDefaults.standard.string(forKey: "custom_prompt") ?? "Rewrite to fix grammar and improve clarity. Please only return the fixed text and nothing else:"
         theme = UserDefaults.standard.string(forKey: "theme") ?? "system"
+        fontSize = UserDefaults.standard.integer(forKey: "font_size") == 0 ? 14 : UserDefaults.standard.integer(forKey: "font_size")
         totalFixes = UserDefaults.standard.integer(forKey: "stat_total_fixes")
         charactersFixed = UserDefaults.standard.integer(forKey: "stat_characters_fixed")
         wordsChanged = UserDefaults.standard.integer(forKey: "stat_words_changed")
@@ -44,6 +46,7 @@ class SettingsManager: ObservableObject {
         UserDefaults.standard.set(defaultProvider, forKey: "default_provider")
         UserDefaults.standard.set(customPrompt, forKey: "custom_prompt")
         UserDefaults.standard.set(theme, forKey: "theme")
+        UserDefaults.standard.set(fontSize, forKey: "font_size")
         UserDefaults.standard.set(totalFixes, forKey: "stat_total_fixes")
         UserDefaults.standard.set(charactersFixed, forKey: "stat_characters_fixed")
         UserDefaults.standard.set(wordsChanged, forKey: "stat_words_changed")

@@ -104,6 +104,8 @@ struct SettingsView: View {
                                 showLoginItemError = true
                             }
                         }
+
+                    Stepper("Font Size: \(settings.fontSize)px", value: $settings.fontSize, in: 12...20)
                 } header: {
                     Text("General")
                 }
@@ -177,6 +179,11 @@ struct SettingsView: View {
             }
         }
         .onChange(of: settings.theme) { _, _ in
+            Task { @MainActor in
+                settings.save()
+            }
+        }
+        .onChange(of: settings.fontSize) { _, _ in
             Task { @MainActor in
                 settings.save()
             }

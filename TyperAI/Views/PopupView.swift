@@ -53,7 +53,7 @@ struct PopupView: View {
 
             // Input
             TextEditor(text: $inputText)
-                .font(.system(size: 14))
+                .font(.system(size: CGFloat(settings.fontSize)))
                 .frame(minHeight: 90, maxHeight: 120)
                 .scrollContentBackground(.hidden)
                 .padding(10)
@@ -74,7 +74,7 @@ struct PopupView: View {
 
                 ScrollView {
                     Text(buildDiff(original: inputText, result: resultText))
-                        .font(.system(size: 14))
+                        .font(.system(size: CGFloat(settings.fontSize)))
                         .foregroundStyle(.primary)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(10)
