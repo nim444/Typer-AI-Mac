@@ -3,7 +3,6 @@ import AppKit
 
 struct PopupView: View {
     @ObservedObject private var settings = SettingsManager.shared
-    var onClose: (() -> Void)?
 
     @State private var inputText = ""
     @State private var resultText = ""
@@ -26,19 +25,9 @@ struct PopupView: View {
 
                 Spacer()
 
-                Picker("", selection: $settings.defaultProvider) {
-                    Text("Grok").tag("grok")
-                    Text("Gemini").tag("gemini")
-                }
-                .pickerStyle(.segmented)
-                .frame(width: 120)
-                .onChange(of: settings.defaultProvider) { _, _ in
-                    Task { @MainActor in
-                        settings.save()
-                    }
-                }
-
-                SettingsLink {
+                Button {
+                    AppDelegate.shared?.openSettingsWindow()
+                } label: {
                     Image(systemName: "gear")
                         .font(.system(size: 13))
                         .foregroundStyle(.secondary)
@@ -106,11 +95,6 @@ struct PopupView: View {
                 }
 
                 if showResult {
-                    Button("Copy & Close") {
-                        copyAndClose()
-                    }
-                    .keyboardShortcut("c", modifiers: [.command, .shift])
-
                     Button("Copy") {
                         NSPasteboard.general.clearContents()
                         NSPasteboard.general.setString(resultText, forType: .string)
@@ -148,12 +132,6 @@ struct PopupView: View {
         }
 
         isLoading = false
-    }
-
-    private func copyAndClose() {
-        NSPasteboard.general.clearContents()
-        NSPasteboard.general.setString(resultText, forType: .string)
-        onClose?()
     }
 
     private func recordStats(input: String, result: String) {

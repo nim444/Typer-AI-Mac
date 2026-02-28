@@ -34,13 +34,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popover.behavior = .transient
         popover.animates = true
         self.popover = popover
-        updatePopoverContent()
+        if #available(macOS 26.0, *) {
+            updatePopoverContent()
+        }
     }
 
+    @available(macOS 26.0, *)
     private func updatePopoverContent() {
-        let view = PopupView(onClose: { [weak self] in
-            self?.closePopover()
-        })
+        let view = PopupView()
         popover?.contentViewController = NSHostingController(rootView: view)
         popover?.contentSize = NSSize(width: 420, height: 280)
     }
@@ -63,7 +64,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if popover?.isShown == true {
             closePopover()
         } else {
-            updatePopoverContent()
+            if #available(macOS 26.0, *) {
+                updatePopoverContent()
+            }
             popover?.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
             popover?.contentViewController?.view.window?.makeKey()
             NSApp.activate(ignoringOtherApps: true)
