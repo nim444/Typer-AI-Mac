@@ -22,8 +22,6 @@ struct SettingsView: View {
                     Text("Default Provider")
                 }
 
-                Divider().padding(.vertical, 4)
-
                 Section {
                     HStack {
                         Group {
@@ -47,8 +45,6 @@ struct SettingsView: View {
                 } header: {
                     Text("Grok (xAI)")
                 }
-
-                Divider().padding(.vertical, 4)
 
                 Section {
                     HStack {
@@ -112,8 +108,6 @@ struct SettingsView: View {
                     Text("General")
                 }
                 
-                Divider().padding(.vertical, 4)
-                
                 Section {
                     Picker("Theme", selection: $settings.theme) {
                         Text("System").tag("system")
@@ -132,6 +126,18 @@ struct SettingsView: View {
             } message: {
                 Text(loginItemErrorMessage)
             }
+            // Stats
+            Form {
+                Section {
+                    LabeledContent("Total Fixes", value: "\(settings.totalFixes)")
+                    LabeledContent("Characters Fixed", value: settings.charactersFixed.formatted())
+                    LabeledContent("Words Changed", value: settings.wordsChanged.formatted())
+                } header: {
+                    Text("Usage")
+                }
+            }
+            .formStyle(.grouped)
+            .tabItem { Label("Stats", systemImage: "chart.bar") }
         }
         .padding()
         .frame(width: 480, height: 360)

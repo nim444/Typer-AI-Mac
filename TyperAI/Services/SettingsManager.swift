@@ -12,6 +12,10 @@ class SettingsManager: ObservableObject {
     @Published var customPrompt: String = "Rewrite to fix grammar and improve clarity. Please only return the fixed text and nothing else:"
     @Published var theme: String = "system"
 
+    @Published var totalFixes: Int = 0
+    @Published var charactersFixed: Int = 0
+    @Published var wordsChanged: Int = 0
+
     let geminiModels = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-2.5-flash-lite"]
     let grokModels = ["grok-4-1-fast-non-reasoning", "grok-3-mini"]
 
@@ -27,6 +31,9 @@ class SettingsManager: ObservableObject {
         defaultProvider = UserDefaults.standard.string(forKey: "default_provider") ?? "grok"
         customPrompt = UserDefaults.standard.string(forKey: "custom_prompt") ?? "Rewrite to fix grammar and improve clarity. Please only return the fixed text and nothing else:"
         theme = UserDefaults.standard.string(forKey: "theme") ?? "system"
+        totalFixes = UserDefaults.standard.integer(forKey: "stat_total_fixes")
+        charactersFixed = UserDefaults.standard.integer(forKey: "stat_characters_fixed")
+        wordsChanged = UserDefaults.standard.integer(forKey: "stat_words_changed")
     }
 
     func save() {
@@ -37,6 +44,9 @@ class SettingsManager: ObservableObject {
         UserDefaults.standard.set(defaultProvider, forKey: "default_provider")
         UserDefaults.standard.set(customPrompt, forKey: "custom_prompt")
         UserDefaults.standard.set(theme, forKey: "theme")
+        UserDefaults.standard.set(totalFixes, forKey: "stat_total_fixes")
+        UserDefaults.standard.set(charactersFixed, forKey: "stat_characters_fixed")
+        UserDefaults.standard.set(wordsChanged, forKey: "stat_words_changed")
     }
 
     private func saveKeychain(key: String, value: String) {

@@ -142,6 +142,7 @@ struct PopupView: View {
             let result = try await AIService.fix(text: trimmed, settings: settings)
             resultText = result.trimmingCharacters(in: .whitespacesAndNewlines)
             showResult = true
+            recordStats(input: trimmed, result: resultText)
         } catch {
             errorMessage = error.localizedDescription
         }
@@ -153,6 +154,17 @@ struct PopupView: View {
         NSPasteboard.general.clearContents()
         NSPasteboard.general.setString(resultText, forType: .string)
         onClose?()
+    }
+
+    private func recordStats(input: String, result: String) {
+        let origWords = input.components(separatedBy: " ")
+        let resultWords = result.components(separatedBy: " ")
+        let common = lcs(origWords, resultWords)
+        let changed = resultWords.count - common.count
+        settings.totalFixes += 1
+        settings.charactersFixed += input.count
+        settings.wordsChanged += max(0, changed)
+        settings.save()
     }
 
     private func buildDiff(original: String, result: String) -> AttributedString {
