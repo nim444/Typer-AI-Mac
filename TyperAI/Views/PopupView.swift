@@ -73,7 +73,7 @@ struct PopupView: View {
                 Divider()
 
                 ScrollView {
-                    Text(resultText)
+                    Text(buildDiff(original: inputText, result: resultText))
                         .font(.system(size: 14))
                         .foregroundStyle(.primary)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -81,7 +81,6 @@ struct PopupView: View {
                         .textSelection(.enabled)
                 }
                 .frame(minHeight: 60, maxHeight: 140)
-                .background(Color.green.opacity(0.06))
             }
 
             Divider()
@@ -154,5 +153,47 @@ struct PopupView: View {
         NSPasteboard.general.clearContents()
         NSPasteboard.general.setString(resultText, forType: .string)
         onClose?()
+    }
+
+    private func buildDiff(original: String, result: String) -> AttributedString {
+        let origWords = original.components(separatedBy: " ")
+        let resultWords = result.components(separatedBy: " ")
+        let common = lcs(origWords, resultWords)
+        var commonIdx = 0
+        var attrStr = AttributedString()
+        for (i, word) in resultWords.enumerated() {
+            if i > 0 { attrStr.append(AttributedString(" ")) }
+            var part = AttributedString(word)
+            if commonIdx < common.count && common[commonIdx] == word {
+                commonIdx += 1
+            } else {
+                part.backgroundColor = Color.green.opacity(0.4)
+            }
+            attrStr.append(part)
+        }
+        return attrStr
+    }
+
+    private func lcs(_ a: [String], _ b: [String]) -> [String] {
+        let m = a.count, n = b.count
+        guard m > 0, n > 0 else { return [] }
+        var dp = [[Int]](repeating: [Int](repeating: 0, count: n + 1), count: m + 1)
+        for i in 1...m {
+            for j in 1...n {
+                dp[i][j] = a[i-1] == b[j-1] ? dp[i-1][j-1] + 1 : max(dp[i-1][j], dp[i][j-1])
+            }
+        }
+        var result: [String] = []
+        var i = m, j = n
+        while i > 0 && j > 0 {
+            if a[i-1] == b[j-1] {
+                result.append(a[i-1]); i -= 1; j -= 1
+            } else if dp[i-1][j] >= dp[i][j-1] {
+                i -= 1
+            } else {
+                j -= 1
+            }
+        }
+        return result.reversed()
     }
 }
